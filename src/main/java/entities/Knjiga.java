@@ -76,6 +76,9 @@ public class Knjiga {
         this.isbn = isbn;
     }
 
+    /**
+     * Metoda računa prosečnu ocenu knjige na osnovu liste recenzija
+     */
     public void izracunajProsek() {
         int size = this.recenzije.size();
         if (size > 0) {

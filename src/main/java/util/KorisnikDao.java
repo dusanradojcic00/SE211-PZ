@@ -6,14 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class    KorisnikDao {
+public class KorisnikDao {
 
     static Connection conn = BazaUtil.getConnection();
 
     /**
      * Metoda za login. Proverava da li uneto korisnicko ime i sifra postoje u bazi podataka
      *
-     * @param username
+     * @param username - korisničko ime za prijavljivanje na nalog (najcesce email)
      * @param password
      * @return true ili false u zavisnosti od toga da li je korisnik uspesno ulogovan
      */

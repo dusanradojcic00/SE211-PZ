@@ -14,6 +14,11 @@ import java.util.List;
 public class KnjigaDao {
     private static Connection conn = BazaUtil.getConnection();
 
+    /**
+     * Metoda traži sve knjige u bazi, povlači sve podatke, i Autora i listu recenzija
+     *
+     * @return Listu svih knjiga iz baze
+     */
     public static List<Knjiga> getAll() {
         String sql = "SELECT * FROM knjiga";
         List<Knjiga> lista = new ArrayList<>();

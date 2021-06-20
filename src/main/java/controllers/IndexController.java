@@ -37,7 +37,7 @@ public class IndexController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         isbnColumn.setCellValueFactory(new PropertyValueFactory<Knjiga, String>("isbn"));
-        naslovColumn.setCellValueFactory(new PropertyValueFactory<Knjiga, String>("opis"));
+        naslovColumn.setCellValueFactory(new PropertyValueFactory<Knjiga, String>("naslov"));
         ocenaColumn.setCellValueFactory(new PropertyValueFactory<Knjiga, Double>("ocena"));
         autorColumn.setCellValueFactory(new PropertyValueFactory<>("autor"));
         ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList(KnjigaDao.getAll());

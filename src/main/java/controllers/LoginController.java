@@ -41,6 +41,7 @@ public class LoginController {
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+            stage.setTitle("Recenzije knjiga");
         } else {
             FxUtil.showMessage("Neispravni podaci", "Neispravni podaci za logovanje, molimo Vas pokusajte ponovo!");
         }

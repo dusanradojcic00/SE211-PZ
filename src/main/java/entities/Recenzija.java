@@ -5,6 +5,9 @@ public class Recenzija {
     private String opis;
     private int ocena;
 
+    public Recenzija() {
+    }
+
     public Recenzija(String naslov, String opis, int ocena) {
         this.naslov = naslov;
         this.opis = opis;
