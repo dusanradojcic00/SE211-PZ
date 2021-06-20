@@ -15,7 +15,7 @@ public class KnjigaDao {
     private static Connection conn = BazaUtil.getConnection();
 
     public static List<Knjiga> getAll() {
-        String sql = "GET * FROM knjiga";
+        String sql = "GET * FROM knjiga k";
         List<Knjiga> lista = new ArrayList<>();
         try {
             Statement st = conn.createStatement();

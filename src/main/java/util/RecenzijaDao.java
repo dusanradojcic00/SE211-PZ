@@ -15,7 +15,7 @@ public class RecenzijaDao {
 
     public static List<Recenzija> getRecenzijeByKnjiga(Knjiga k) {
         List<Recenzija> recenzije = new ArrayList<>();
-        String sql = "SELECT * FROM recenzije WHERE isbn = ?";
+        String sql = "SELECT * FROM recenzija WHERE isbn = ?";
 
         try {
             PreparedStatement ps = conn.prepareStatement(sql);

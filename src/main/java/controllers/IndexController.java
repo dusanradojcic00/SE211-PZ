@@ -1,6 +1,7 @@
 package controllers;
 
 import entities.Knjiga;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -25,7 +26,7 @@ public class IndexController {
 
 
     public IndexController() {
-        ObservableList<Knjiga> listaKnjiga = tabela.getItems();
+        ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList(tabela.getItems());
 
 
     }

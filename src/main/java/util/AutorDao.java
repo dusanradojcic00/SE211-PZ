@@ -12,7 +12,7 @@ public class AutorDao {
     private static Connection conn = BazaUtil.getConnection();
 
     public static Autor getAutorByKnjiga(Knjiga k){
-        String sql = "SELECT * FROM autor a JOIN autor_knjiga ak ON a.autor_id = ak.autor_id WHERE ak.isbn = ?";
+        String sql = "SELECT * FROM autor a JOIN knjiga k on a.autor_id = k.knjiga_id WHERE k.isbn = ? LIMIT 1";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, k.getIsbn());
