@@ -24,4 +24,9 @@ public class Autor extends Osoba {
     public void setDatumRodjenja(Date datumRodjenja) {
         this.datumRodjenja = datumRodjenja;
     }
+
+    @Override
+    public String toString() {
+        return ime + " " + prezime;
+    }
 }

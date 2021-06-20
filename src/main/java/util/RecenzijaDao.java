@@ -24,7 +24,7 @@ public class RecenzijaDao {
             while (rs.next()) {
                 String naslov = rs.getString("naslov");
                 String opis = rs.getString("opis");
-                double ocena = rs.getDouble("ocena");
+                int ocena = rs.getInt("ocena");
                 Recenzija r = new Recenzija(naslov, opis, ocena);
                 recenzije.add(r);
             }

@@ -29,7 +29,7 @@ public class KnjigaDao {
                 knjiga.setAutor(autor);
                 List<Recenzija> recenzije = RecenzijaDao.getRecenzijeByKnjiga(knjiga);
                 knjiga.setRecenzije(recenzije);
-                knjiga.setOcena(3.5);
+                knjiga.izracunajProsek();
                 lista.add(knjiga);
             }
         } catch (SQLException throwables) {

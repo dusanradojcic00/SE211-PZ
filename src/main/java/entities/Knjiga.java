@@ -75,4 +75,15 @@ public class Knjiga {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
+
+    public void izracunajProsek() {
+        int size = this.recenzije.size();
+        if (size > 0) {
+            int sum = 0;
+            for (int i = 0; i < size; i++) {
+                sum += this.recenzije.get(i).getOcena();
+            }
+            setOcena(sum / size);
+        }
+    }
 }

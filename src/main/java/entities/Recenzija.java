@@ -3,9 +3,9 @@ package entities;
 public class Recenzija {
     private String naslov;
     private String opis;
-    private double ocena;
+    private int ocena;
 
-    public Recenzija(String naslov, String opis, double ocena) {
+    public Recenzija(String naslov, String opis, int ocena) {
         this.naslov = naslov;
         this.opis = opis;
         this.ocena = ocena;
@@ -27,11 +27,11 @@ public class Recenzija {
         this.opis = opis;
     }
 
-    public double getOcena() {
+    public int getOcena() {
         return ocena;
     }
 
-    public void setOcena(double ocena) {
+    public void setOcena(int ocena) {
         this.ocena = ocena;
     }
 }

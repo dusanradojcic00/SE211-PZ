@@ -1,6 +1,7 @@
 package controllers;
 
 import entities.Knjiga;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -38,6 +39,7 @@ public class IndexController implements Initializable {
         isbnColumn.setCellValueFactory(new PropertyValueFactory<Knjiga, String>("isbn"));
         naslovColumn.setCellValueFactory(new PropertyValueFactory<Knjiga, String>("opis"));
         ocenaColumn.setCellValueFactory(new PropertyValueFactory<Knjiga, Double>("ocena"));
+        autorColumn.setCellValueFactory(new PropertyValueFactory<>("autor"));
         ObservableList<Knjiga> listaKnjiga = FXCollections.observableArrayList(KnjigaDao.getAll());
         this.tabela.setItems(listaKnjiga);
     }
