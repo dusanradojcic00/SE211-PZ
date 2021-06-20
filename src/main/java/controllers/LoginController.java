@@ -35,7 +35,7 @@ public class LoginController {
     void login(ActionEvent event) throws IOException {
         String email = inputEmail.getText();
         String pass = inputPass.getText();
-        if (KorisnikDao.login(email, pass)) {
+       if (KorisnikDao.login(email, pass)) {
             Parent parent = FXMLLoader.load(getClass().getResource("/index.fxml"));
             Scene scene = new Scene(parent);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

@@ -15,7 +15,7 @@ public class KnjigaDao {
     private static Connection conn = BazaUtil.getConnection();
 
     public static List<Knjiga> getAll() {
-        String sql = "GET * FROM knjiga k";
+        String sql = "SELECT * FROM knjiga";
         List<Knjiga> lista = new ArrayList<>();
         try {
             Statement st = conn.createStatement();
@@ -29,6 +29,8 @@ public class KnjigaDao {
                 knjiga.setAutor(autor);
                 List<Recenzija> recenzije = RecenzijaDao.getRecenzijeByKnjiga(knjiga);
                 knjiga.setRecenzije(recenzije);
+                knjiga.setOcena(3.5);
+                lista.add(knjiga);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

@@ -6,7 +6,7 @@ public class Knjiga {
     private String isbn;
     private String naslov;
     private String opis;
-    private double prosecnaOcena;
+    private double ocena;
     private Autor autor;
     private List<Recenzija> recenzije;
 
@@ -19,11 +19,11 @@ public class Knjiga {
         this.opis = opis;
     }
 
-    public Knjiga(String isbn, String naslov, String opis, double prosecnaOcena, Autor autor, List<Recenzija> recenzije) {
+    public Knjiga(String isbn, String naslov, String opis, double ocena, Autor autor, List<Recenzija> recenzije) {
         this.isbn = isbn;
         this.naslov = naslov;
         this.opis = opis;
-        this.prosecnaOcena = prosecnaOcena;
+        this.ocena = ocena;
         this.autor = autor;
         this.recenzije = recenzije;
     }
@@ -44,12 +44,12 @@ public class Knjiga {
         this.opis = opis;
     }
 
-    public double getProsecnaOcena() {
-        return prosecnaOcena;
+    public double getOcena() {
+        return ocena;
     }
 
-    public void setProsecnaOcena(double prosecnaOcena) {
-        this.prosecnaOcena = prosecnaOcena;
+    public void setOcena(double ocena) {
+        this.ocena = ocena;
     }
 
     public Autor getAutor() {
