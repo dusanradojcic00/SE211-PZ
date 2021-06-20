@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class KorisnikDao {
+public class    KorisnikDao {
 
     static Connection conn = BazaUtil.getConnection();
 

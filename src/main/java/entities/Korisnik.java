@@ -1,14 +1,21 @@
 package entities;
 
-public class Korisnik {
+public class Korisnik extends Osoba {
     private String username;
     private String password;
-    private String name;
 
-    public Korisnik(String username, String password, String name) {
+    public Korisnik() {
+    }
+
+    public Korisnik(String ime, String prezime, String username, String password) {
+        super(ime, prezime);
         this.username = username;
         this.password = password;
-        this.name = name;
+    }
+
+    public Korisnik(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
 
